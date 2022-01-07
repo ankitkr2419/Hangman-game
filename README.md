@@ -1,4 +1,4 @@
 # Hangman-game
-![](/screenshot/Screenshot from 2022-01-07 18-21-18.png)
-![](/screenshot/Screenshot from 2022-01-07 18-21-35.png)
-![](/screenshot/Screenshot from 2022-01-07 18-21-45.png)
+![](/screenshot/1.png)
+![](/screenshot/2.png)
+![](/screenshot/3.png)
