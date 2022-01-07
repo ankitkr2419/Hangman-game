@@ -1,2 +1,4 @@
 # Hangman-game
-A repo for hangman game 
+![](/screenshot/1.png)
+![](/screenshot/2.png)
+![](/screenshot/3.png)
