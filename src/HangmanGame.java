@@ -33,13 +33,13 @@ public class HangmanGame implements GameController {
             PrintUtils.welcomeMessage();
             while (sc.getWrongGuess() < sc.MAX_LIVES) {
                 System.out.print("Word :: ");
-                System.out.println(wordFoundContent());
+                System.out.println(wordFoundTillNow());
                 PrintUtils.enterWordMessage();
                 String str = input.next();
                 if (str.length() > 1) {
                     str = str.substring(0, 1);
                 }
-                enter(str);
+                wordEnter(str);
                 if (wordFound()) {
                     System.out.println("\nYou win!");
                     break;
@@ -52,6 +52,9 @@ public class HangmanGame implements GameController {
                 PrintUtils.looseMessage(wordToFind);
             }
         }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -63,7 +66,7 @@ public class HangmanGame implements GameController {
         return wordToFind.contentEquals(new String(wordFound));
     }
 
-    private void enter(String c) {
+    private void wordEnter(String c) {
         if (!letters.contains(c)) {
             if (wordToFind.contains(c)) {
                 int index = wordToFind.indexOf(c);
@@ -78,7 +81,7 @@ public class HangmanGame implements GameController {
         }
     }
 
-    private String wordFoundContent() {
+    private String wordFoundTillNow() {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < wordFound.length; i++) {
             builder.append(wordFound[i]);
